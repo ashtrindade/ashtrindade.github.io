@@ -2148,6 +2148,10 @@ input, select, textarea {
 			#top p a {
 				color: inherit;
 			}
+		#top .social-icon {
+			width: 30px;
+			height: 30px;
+		}
 
 	#contact footer {
 		font-size: 0.9em;
