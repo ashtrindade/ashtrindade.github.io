@@ -2113,6 +2113,11 @@ input, select, textarea {
 					border-right: solid 0.75em transparent;
 					border-top: solid 0.6em #282828;
 				}
+/* Language buttons */	
+			
+	#usflag2, #brflag1 {
+		filter: grayscale(1) contrast(1.5) brightness(1);
+	}
 
 /* Articles */
 
