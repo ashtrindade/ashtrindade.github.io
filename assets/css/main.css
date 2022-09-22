@@ -110,12 +110,12 @@ input, select, textarea {
 		-webkit-transition: color .2s ease-in-out;
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
-		color: #43B3E0;
+		color: #fff;
 		text-decoration: underline;
 	}
 
 		a:hover {
-			color: #43bff0 !important;
+			color: #db8e8b;
 		}
 
 		a img {
@@ -205,7 +205,7 @@ input, select, textarea {
 	}
 
 	header {
-		margin: 0 0 3em 0;
+		margin: -5em 0 1em 0;
 	}
 
 		header > p {
@@ -214,12 +214,16 @@ input, select, textarea {
 		}
 
 	footer {
-		margin: 3em 0 0 0;
+		margin: 0 0 0 0;
 	}
 
 		footer > p {
 			font-size: 1.25em;
 		}
+
+	#datasets {
+		margin: 50px 0 2px 0;
+	}
 
 /* Container */
 
@@ -1576,67 +1580,88 @@ input, select, textarea {
 			padding-left: 0.25em;
 		}
 
-/* Social */
-
-	ul.social {
-		cursor: default;
-		margin: 0;
-		list-style: none;
-		padding-left: 0;
+/* Social */		
+.wrapper-social {
+	display: inline-flex;
+	list-style: none;
 	}
+	
+	.wrapper-social .icon {
+	position: relative;
+	background: #444;
+	border-radius: 50%;
+	padding: 15px;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	
+	.wrapper-social .tooltip {
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	background: #ffffff;
+	color: #fff !important;
+	padding: 5px 8px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	
+	.wrapper-social .tooltip::before {
+	position: absolute;
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: #ffffff;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%) rotate(45deg);
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	
+	.wrapper-social .icon:hover .tooltip {
+	top: -45px;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	}
+	
+	.wrapper-social .icon:hover span,
+	.wrapper-social .icon:hover .tooltip {
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+	}
+	
+	.wrapper-social .twitter:hover,
+	.wrapper-social .twitter:hover .tooltip,
+	.wrapper-social .twitter:hover .tooltip::before {
+	background: #282828;
+	color: #fff !important;
+	}
+		
+	.wrapper-social .github:hover,
+	.wrapper-social .github:hover .tooltip,
+	.wrapper-social .github:hover .tooltip::before {
+	background: #282828;
+	color: #fff !important;
+	}	
 
-		ul.social li {
-			position: relative;
-			display: inline-block;
-			margin: 0.25em;
-			top: 0;
-			padding-left: 0;
-		}
-
-			ul.social li a {
-				-moz-transition: top .2s ease-in-out;
-				-webkit-transition: top .2s ease-in-out;
-				-ms-transition: top .2s ease-in-out;
-				transition: top .2s ease-in-out;
-				display: block;
-				width: 48px;
-				height: 48px;
-				border-radius: 6px;
-				top: 0;
-				position: relative;
-			}
-
-				ul.social li a:before {
-					background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					-moz-transition: background-color .2s ease-in-out;
-					-webkit-transition: background-color .2s ease-in-out;
-					-ms-transition: background-color .2s ease-in-out;
-					transition: background-color .2s ease-in-out;
-					background-color: #444;
-					border-radius: 6px;
-					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-					color: #2E2E2E !important;
-					display: block;
-					font-size: 26px;
-					height: 48px;
-					line-height: 48px;
-					text-align: center;
-					outline: 0;
-					overflow: hidden;
-					text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
-					width: 48px;
-				}
-
-				ul.social li a:hover {
-					top: -5px;
-				}
-
-					ul.social li a:hover:before {
-						background-color: transparent;
-					}
+	.wrapper-social .sponsor:hover,
+	.wrapper-social .sponsor:hover .tooltip,
+	.wrapper-social .sponsor:hover .tooltip::before {
+	background: #282828;
+	color: #fff !important;
+	}	
 
 /* Actions */
 
@@ -1842,7 +1867,7 @@ input, select, textarea {
 
 			#nav a:hover {
 				color: #fff !important;
-				background: #383838;
+				background: #5A3B3A;
 			}
 
 			#nav a.active {

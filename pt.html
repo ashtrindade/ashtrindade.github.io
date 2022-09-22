@@ -17,12 +17,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta name="description" content="Portfólio de  Ash Trindade.">
+
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link type="image/png" sizes="16x16" rel="icon" href="./images/favicon/favicon-16.png"
+
+    <!--favicon-->
+    <link type="image/png" sizes="32x32" rel="icon" href="./images/favicon/ficon-32.png"
         alt="favicon: menor que, barra, maior que.">
-    <link type="image/png" sizes="32x32" rel="icon" href="./images/favicon/favicon-32.png"
-        alt="favicon: menor que, barra, maior que.">
-    <link type="image/png" sizes="96x96" rel="icon" href="./images/favicon/favicon-96.png"
+    <link type="image/png" sizes="96x96" rel="icon" href="./images/favicon/icon-96.png"
         alt="favicon: menor que, barra, maior que.">
 </head>
 
@@ -31,8 +32,8 @@
     <nav id="nav">
         <ul class="container">
             <li><a href="#top">Sobre</a></li>
-            <li><a href="#work">Trabalho</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#portfolio">Projetos</a></li>
+            <li><a href="#datasets">Datasets</a></li>
             <li><a href="./pt.html"><img id="brflag2" src="./images/lang/icon-pt-br.png" alt="Bandeira do Brasil" /></a>
             </li>
             <li><a href="./index.html"><img id="usflag2" src="./images/lang/icon-en-us.png"
@@ -45,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-5-large col-12-medium">
-                    <span class="image fit"><img src="images/profile-pic.png"
+                    <span class="image fit"><img src="images/pfp.png"
                             alt="Desenho de um homem, pele escura, cabelo preto e óculos." /></span>
                 </div>
                 <div class="col-8 col-7-large col-12-medium">
@@ -55,22 +56,34 @@
                     <p>Oi, eu sou Ash! <br />Atualmente estou trabalhando em bots no Discord com foco em acessibilidade
                         e estou aprendendo Javascript.</p>
                     <h2>Me encontre:</h2>
-                    <ul class="social">
+                    <ul class="wrapper-social">
                         <!--twitter-->
-                        <li><a href="https://twitter.com/onlyashd" target="_blank" class="social-icon"><img
-                                    src="./images/social-media/icon-twitter.svg" alt="logo do twitter" /></a></li>
+                        <li class="icon twitter">
+                            <span class="tooltip">Twitter</span>
+                            <span>
+                                <a href="https://twitter.com/onlyashd" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                            </span>
+                            </a>
+                        </li>
                         <!--github-->
-                        <li><a href="https://github.com/ashtrindade" target="_blank" class="social-icon"><img
-                                    src="./images/social-media/icon-github.svg" alt="logo do github" /></a></li>
-                        <!--kaggle-->
-                        <li><a href="https://www.kaggle.com/ashtrindade" target="_blank" class="social-icon"><img
-                                    src="./images/social-media/icon-kaggle.svg" alt="logo do kaggle" /></a></li>
-                        <!--rapid-->
-                        <li><a href="https://rapidapi.com/user/ashtrindade" target="_blank" class="social-icon"><img
-                                    src="./images/social-media/icon-rapid.svg" alt="logo do rapid api" /></a></li>
-                        <!--email-->
-                        <li><a href="mailto:ashtrindade5@gmail.com" target="_blank" class="social-icon"><img
-                                    src="./images/social-media/icon-mail.svg" alt="logo do gmail" /></a></li>
+                        <li class="icon github">
+                            <span class="tooltip">Github</span>
+                            <span>
+                                <a href="https://github.com/ashtrindade" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </span>
+                        </li>
+                        <!--sponsor-->
+                        <li class="icon sponsor">
+                            <span class="tooltip">Sponsor</span>
+                            <span>
+                                <a href="https://github.com/sponsors/ashtrindade" target="_blank">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,122 +91,100 @@
 
     </article>
 
-    <!-- Work -->
-    <article id="work" class="wrapper style2">
-        <div class="container">
-            <header>
-                <h2>Em que estou trabalhando.</h2>
-            </header>
-            <div class="row aln-center">
-                <div class="col-4 col-6-medium col-12-small">
-                    <section class="box style1">
-                        <span class="icon brands fa-discord"></span>
-                        <h3>Discord</h3>
-                        <p>BOTs e outros recursos.</p>
-                    </section>
-                </div>
-                <div class="col-4 col-6-medium col-12-small">
-                    <section class="box style1">
-                        <span class="icon solid fa-file-archive"></span>
-                        <h3>Datasets</h3>
-                        <p>Construindo datasets em PT-BR.</p>
-                    </section>
-                </div>
-                <div class="col-4 col-6-medium col-12-small">
-                    <section class="box style1">
-                        <span class="icon brands fa-accessible-icon"></span>
-                        <h3>Acessibilidade</h3>
-                        <p>Speech-to-text e outros recursos.</p>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </article>
 
-    <!-- Portfolio -->
+    <!---------------- Repositories ---------------------->
     <article id="portfolio" class="wrapper style3">
         <div class="container">
             <header>
-                <h2>Trabalho recente.</h2>
+                <h2>Projetos:</h2>
             </header>
             <div class="row">
-                <!-- CDD dataset -->
+                <!----------------- First Row ------------------>
+                <!-- altbichinhos API -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/cdd-pt.png"
-                                alt="Fundo azul e branco escrito: 'Cidade de Deus: Dataset do roteiro.' e o poster do filme." /></a>
-                        <h3>City of God</h3>
-                        <p>Dataset do roteiro em PT-BR.</p>
-                        <h4><a href="https://www.kaggle.com/datasets/ashtrindade/script-cidade-de-deus-ptbr"
-                                target="_blank">Confira em Kaggle</a>
-                        </h4>
-                    </article>
-                </div>
-                <!-- Daily Megatron -->
-                <div class="col-4 col-6-medium col-12-small">
-                    <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/megatron.png"
-                                alt="Preview do Github escrito: Um bot que tweeta um único vídeo diariamente." /></a>
-                        <h3>Daily Megatron</h3>
-                        <p>Um bot usando Twitter API v2.</p>
-                        <h4><a href="https://github.com/ashtrindade/daily-megatron" target="_blank">Confira no
-                                Github</a>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/altbichinhos.png"
+                                alt="Alt Bichinhos API" /></a>
+                        <h3>Alt Bichinhos API</h3>
+                        <p>Imagens de pets com texto alternativo. </br> Três idiomas disponpiveis.</p>
+                        <h4><a href="https://github.com/ashtrindade/altbichinhos" target="_blank">Github</a> - <a
+                                href="https://rapidapi.com/ashtrindade/api/alt-bichinhos" target="_blank">Get Key</a>
                         </h4>
                     </article>
                 </div>
                 <!-- Spacey API -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/spc-api.png"
-                                alt="Preview do Github escrito: uma API que procura por artigos no site da LGBTQ+ Spacey." /></a>
-                        <h3>API de Busca</h3>
-                        <p>Uma API que procura por artigos no site da LGBTQ+ Spacey.</p>
-                        <h4><a href="https://github.com/ashtrindade/spacey-website-articles-api" target="_blank">Confira
-                                no Github</a>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/lgbtqspacey-api.png"
+                                alt="LGBTQ+ Spacey API" /></a>
+                        <h3>LGBTQ+ Spacey API</h3>
+                        <p>Extraia artigos dos site da LGBTQ+ Spacey.</p>
+                        <h4><a href="https://github.com/ashtrindade/spacey-website-articles-api"
+                                target="_blank">Github</a> - <a
+                                href="https://rapidapi.com/ashtrindade/api/spacey-website-articles" target="_blank">Get
+                                Key</a>
                         </h4>
                     </article>
                 </div>
+                <!-- World Cup Game -->
+                <div class="col-4 col-6-medium col-12-small">
+                    <article class="box style2">
+                        <a href="#portfolio" class="image featured"><img src="./images/work/wcg.png"
+                                alt="World Cup Game" /></a>
+                        <h3>World Cup Game</h3>
+                        <p>Adivinhe em que ano este país venceu uma Copa do Mundo.</p>
+                        <h4><a href="https://github.com/ashtrindade/world-cup-game" target="_blank">Github</a> - <a
+                                href="https://ashtrindade.github.io/world-cup-game/" target="_blank">Play Game</a>
+                        </h4>
+                    </article>
+                </div>
+                <!---------------- Second Row ----------------->
                 <!-- Spacey Wordle -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/spc-wordle.png"
-                                alt="Preview do Github escrito: Um jogo de adivinhação feito para LGBTQ+ Spacey" /></a>
-                        <h3>Wordle Game</h3>
-                        <p>Um jogo de adivinhação feito para LGBTQ+ Spacey.</p>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/lgbtqspacey-wordle.png"
+                                alt="LGBTQ+ Spacey Wordle" /></a>
+                        <h3>LGBTQ+ Spacey Wordle</h3>
+                        <p>Um Wordle Game feito para a LGBTQ+ Spacey.</p>
                         <h4><a href="https://github.com/ashtrindade/wordle-spacey" target="_blank">Github</a> - <a
                                 href="https://ashtrindade.github.io/wordle-spacey" target="_blank">Play Game</a>
                         </h4>
                     </article>
                 </div>
-                <!-- Spacey DialoGPT -->
+                <!-- Weekly - Puss in Boots -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/spc-ia.png"
-                                alt="Preview do Huggingface escrito: ashtrindade/chatbot-stacey" /></a>
-                        <h3>DialoGPT Model</h3>
-                        <p>Feito para o Bot da LGBTQ+ Spacey no Discord.</p>
-                        <h4><a href="https://huggingface.co/ashtrindade/chatbot-stacey" target="_blank">Confira no
-                                Huggingface</a>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/pib.png"
+                                alt="Puss in Boots - BOT" /></a>
+                        <h3>Puss in Boots - BOT</h3>
+                        <p>Toda segunda-feira o 'Gato de Botas' dizendo que odeia segunda-feira.</p>
+                        <h4><a href="https://github.com/ashtrindade/monday-puss-in-boots" target="_blank">Github</a> -
+                            <a href="https://twitter.com/mondaygato" target="_blank">Twitter</a>
                         </h4>
                     </article>
                 </div>
-                <!--Discord BOT -->
+                <!-- Stacey -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" target="_blank" class="image featured"><img src="./images/work/discord.jpg"
-                                alt="Fundo azul escrito Discord em branco" /></a>
-                        <h3>Guia: criar bot no Discord</h3>
-                        <p>Usando a biblioteca Discord.js.</p>
-                        <h4><a href="https://github.com/ashtrindade/discordjs-bot" target="_blank">Confira no Github</a>
-                        </h4>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/stacey.png"
+                                alt="Stacey - BOT" /></a>
+                        <h3>Stacey - BOT</h3>
+                        <p>Um BOT multifuncional para o Discord da LGBTQ+ Spacey.</p>
+                        <h4><a href="https://github.com/ashtrindade/discordjs-bot" target="_blank">Demo</a></h4>
                     </article>
                 </div>
+
+                <!-------------------- Datasets ---------------------->
+                <div class="container">
+                    <h2 id="datasets">Datasets:</h2>
+                </div>
+
                 <!--Finding Dory -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/dory-pt.png"
-                                alt="Fundo azul e branco, escrito 'Procurando Dory: dataset do roteiro' e um poster do filme." /></a>
-                        <h3>Procurando Dory</h3>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/dory.png"
+                                alt="Finding Dory - Procurando Dory" /></a>
+                        <h3>Produrando Doy</h3>
                         <p>Dataset do roteiro.</p>
                         <h4><a href="https://www.kaggle.com/datasets/ashtrindade/finding-dory-movie-script"
                                 target="_blank">Inglês</a> - <a
@@ -204,8 +195,8 @@
                 <!-- Finding Nemo -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/nemo-pt.png"
-                                alt="Fundo azul e branco, escrito 'Procurando Nemo: dataset do roteiro' e um poster do filme." /></a>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/nemo.png"
+                                alt="Finding Nemo - Procurando Nemo" /></a>
                         <h3>Procurando Nemo</h3>
                         <p>Dataset do roteiro.</p>
                         <h4><a href="https://www.kaggle.com/datasets/ashtrindade/finding-nemo-movie-script"
@@ -214,14 +205,16 @@
                                 target="_blank">Português</a></h4>
                     </article>
                 </div>
-                <!-- Stacey -->
+                <!-- CDD dataset -->
                 <div class="col-4 col-6-medium col-12-small">
                     <article class="box style2">
-                        <a href="#portfolio" class="image featured"><img src="./images/work/spc-bot.png"
-                                alt="Perfil do discord em rosa. Usuário: Stacey#6802." /></a>
-                        <h3>Stacey</h3>
-                        <p>Um BOT multifuncional para o servidor da LGBTQ+ Spacey no Discord.</p>
-                        <h4><a href="https://discord.com/invite/jt4PWme44X" target="_blank">Entre no servidor</a></h4>
+                        <a href="#portfolio" class="image featured"><img src="./images/work/cdd.png"
+                                alt="City of God - Cidade de Deus" /></a>
+                        <h3>Cidade de Deus</h3>
+                        <p>Dataset do roteiro.</p>
+                        <h4><a href="https://www.kaggle.com/datasets/ashtrindade/script-cidade-de-deus-ptbr"
+                                target="_blank">Português</a>
+                        </h4>
                     </article>
                 </div>
             </div>

@@ -32,3 +32,10 @@
 		});
 
 })(jQuery);
+
+
+// Show Overlay
+const overlay = document.getElementById('overlay-container')
+function showOverlay() {
+    overlay.style.display = 'block'
+}
